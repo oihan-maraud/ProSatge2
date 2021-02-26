@@ -24,6 +24,15 @@ class ProjetStageController extends AbstractController
       return  $this ->render('projet_stage/index.html.twig', ['stages'=>$stages]);
     }
 
+    /**
+     * @Route("/ajouterEntreprise", name="projet_stage_ajoutEntreprise")
+     */
+    public function ajouterEntreprise(): Response
+    {
+      //afficher la page présentant le formulaire d'ajout d'une entreprise
+      return  $this -> render('projet_stage/ajoutEntreprise.html.twig');
+    }
+
 
     /**
      * @Route("/stages/{id}", name="projet_stage_Stages")
