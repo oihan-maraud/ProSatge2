@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1><center> Bienvenue sur l'application ProStage<center></h1>
+
+<p style="text-indent: 15px;">
+  Voici la liste des stages proposées:
+</p>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            Stages
+          </th>
+          <th>
+            Entreprises
+          </th>
+          <th>
+            Formations
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for stageCourant in stages %}
+        <tr class="table table-dark">
+          <td>
+            <a href="{{path('projet_stage_Stages',{id:stageCourant.id})}}">
+              {{stageCourant.intitule}}
+            </a>
+          </td>
+          <td>
+            <a href="{{path('projet_stage_enreprise',{nom:stageCourant.entreprise.nom})}}">
+              {{stageCourant.entreprise.nom}}
+            </a>
+          </td>
+          <td>
+            {% for formation in stageCourant.formation %}
+              {{formation.intitule}}
+            {%endfor%}
+          </td>
+        </tr>
+      {% endfor %}
+
+      </tbody>
+    </table>
+    <center>
+    <div class="row">
+      <div class="col-md-6">
+
+        <button type="button" class="btn btn-secondary">
+          <a href="{{path('projet_stage_filtre_formation')}}">
+            Filtrer par formation
+          </a>
+        </button>
+      </div>
+      <div class="col-md-6">
+
+        <button type="button" class="btn btn-secondary">
+          <a href="{{path('projet_stage_filtre_entreprise')}}">
+            Filtrer par entreprises
+          </a>
+        </button>
+
+      </div>
+    </div>
+    </center>
+  </div>
+</div>
+</div>
+{% endblock %}

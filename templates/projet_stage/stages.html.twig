@@ -1,0 +1,43 @@
+
+
+{% block body %}
+
+<h1> <center> {{stage.intitule}} </center></h1>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+  <h2>
+    Descriptif du stage
+  </h2>
+  <p>
+    {{stage.description}}
+  </p>
+
+  <h2>Vos missions : </h2>
+  <p>
+    <ul>
+      <li> Récolter le besoin et rédiger les spécifications.<br>
+      <li> Concevoir des écrans web et les valider avec l'équipe.<br>
+      <li> Réaliser ces écrans à l'aide des technologies convenues ensemble avec l'équipe projet, possiblement parmi les technologies suivantes : HTML, CSS, JavaScript, Ruby... Cela fera l'objet d'un échange pour trouver la technologie adaptée au besoin.<br>
+      <li> Valider les travaux réalisés à l'aide d'un plan de test.<br>
+      <li> Assurer la maintenabilité / l'exploitation de la solution en rédigeant une documentation.
+    </ul>
+  </p><br>
+
+  <h2>
+    Informations complémentaires
+  </h2>
+  <p><center>
+    Entreprise : {{stage.entreprise.nom}}<br><br>
+    Activité : {{stage.intitule}}<br><br>
+    Adresse : {{stage.entreprise.adresse}}<br><br>
+    email : {{stage.email}}<br><br>
+    </center>
+  </p>
+
+</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+				<h1><center> Liste des stages par entreprises</center></h1>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							Entreprises
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for stageCourant in stage %}
+
+	        <tr class="table-dark">
+	            <td>
+	                <a href="{{path('projet_stage_Stages',{id:stageCourant.id})}}">{{stageCourant.intitule}}</a>
+	            </td>
+	        </tr>
+
+	        {% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}

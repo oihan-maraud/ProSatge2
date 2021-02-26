@@ -1,0 +1,41 @@
+0000000000000000000000000000000000000000 4ca3909325d8ae269162cfd8305251c82e09db91 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1606490513 +0100	commit (initial): Installation de symfony
+4ca3909325d8ae269162cfd8305251c82e09db91 d498462e02448297b1775f24ce6e9fb64ec9f1eb oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1606492720 +0100	merge creation-controleur: Fast-forward
+d498462e02448297b1775f24ce6e9fb64ec9f1eb c5c4ce903e3de0f01c99bd0457a8a44e35a335b5 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1606593886 +0100	merge route_accueil: Fast-forward
+c5c4ce903e3de0f01c99bd0457a8a44e35a335b5 d3ab6d480ad1e900cb77b5f97982d450e2d3f490 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1606599612 +0100	commit: Mise en place des pages via une réponse brute
+d3ab6d480ad1e900cb77b5f97982d450e2d3f490 a994775f4876020d079e35cf8e71b4365360497f oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1606601880 +0100	commit: Mise en place de l'affichage avec des vues
+a994775f4876020d079e35cf8e71b4365360497f cfa079b896d9cd8953ac9ac95b7ca85dd021424b oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1606840147 +0100	commit: mise en lace d'une page d'accueil simple en html
+cfa079b896d9cd8953ac9ac95b7ca85dd021424b 89b4a5514a543c7ad7ef0014c285b3ce899b53ee oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1606842011 +0100	commit: Mise en place des différentes pages de ProStages
+89b4a5514a543c7ad7ef0014c285b3ce899b53ee 6ddcc44f9edaa5215b1ef34fcec5dde7df287be4 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1606842547 +0100	commit: mise en place d'un début dynamique
+6ddcc44f9edaa5215b1ef34fcec5dde7df287be4 8a2d49d0dea734b7391990afdecbcaee0c742ad0 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1606844320 +0100	commit: Mise en place du dynamisme
+8a2d49d0dea734b7391990afdecbcaee0c742ad0 d67139a8cff0fff81cfb5bdf98551b5937edf1ed oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1608300920 +0100	commit: Integration du template de base fournit par symfony
+d67139a8cff0fff81cfb5bdf98551b5937edf1ed 5110202df100939018eb296acbfb864db9396539 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1608303100 +0100	commit: Integration simple de bootstrap
+5110202df100939018eb296acbfb864db9396539 7be21de22ec75a6e52168694a41a734b0fd611d1 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1608304193 +0100	commit: Integration du framework bootstrap en local
+7be21de22ec75a6e52168694a41a734b0fd611d1 ba9898b21a133671ef49d0dd55551cec2c734579 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1608412977 +0100	commit: Modification rapide de la page index
+ba9898b21a133671ef49d0dd55551cec2c734579 bdeb7295b3bf2fb63149ae34f65a9c7f7b4612a3 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1609796456 +0100	merge Integration-icone-fontello: Fast-forward
+bdeb7295b3bf2fb63149ae34f65a9c7f7b4612a3 7a1c420f5323bad17924fe2270e5e06b75556d1f oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610037431 +0100	commit: premiere approche de Bootstraps
+7a1c420f5323bad17924fe2270e5e06b75556d1f a628c4e6ed69865bca2a7f431b9c19eca7c0c971 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610384278 +0100	commit: Création de l'entité Entreprise
+a628c4e6ed69865bca2a7f431b9c19eca7c0c971 5826919a98b54e91e0c1d466f7d9912af84ab5b2 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610385239 +0100	commit: Creation de l'entité Formation
+5826919a98b54e91e0c1d466f7d9912af84ab5b2 241c0a3967bb980576de4fa0ea1b20762e92c60f oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610386734 +0100	commit: Création de l'entité Stage et mise en place des relations
+241c0a3967bb980576de4fa0ea1b20762e92c60f 11f52f7fd0c0a3c8e84905545d8fabd5244ce155 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610389202 +0100	commit: Création d'un module de test en BD
+11f52f7fd0c0a3c8e84905545d8fabd5244ce155 5f29245a69326cb7179373603da7e3c40de9fdaf oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610389636 +0100	commit: Installation de la librairie Faker
+5f29245a69326cb7179373603da7e3c40de9fdaf 0f387e2fe012bdc1499d02a7a5ed8e6a49997ad5 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610390391 +0100	commit: Premiere utilisation de la librairie Faker
+0f387e2fe012bdc1499d02a7a5ed8e6a49997ad5 9e88c78fde51cf4cf8d8306454208fcc793cd280 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610398174 +0100	commit: Génération de formation et envoie en BD
+9e88c78fde51cf4cf8d8306454208fcc793cd280 700f5e7d33f839f86d6ed5298076b54fe602a877 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610407400 +0100	commit: Génération des données liées
+700f5e7d33f839f86d6ed5298076b54fe602a877 c9e6b88151578ce807abd7a6b2d1f12fa695a1a5 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610703458 +0100	commit: Modification de Appfixtures.php
+c9e6b88151578ce807abd7a6b2d1f12fa695a1a5 34bcea7b94d2986aaca0f8d82e938152a064043d oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610706220 +0100	commit: Amelioration du contenu de la page d'accueil
+34bcea7b94d2986aaca0f8d82e938152a064043d 6e327eaf8e79d03c4258daf257901b077d96606f oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610707296 +0100	commit: Correction d'une erreur Appfixtures
+6e327eaf8e79d03c4258daf257901b077d96606f 1dcc3736046b2b15666580733bd23872c6a531f7 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610729000 +0100	commit: Utilisation bootstrap pour l'affichage d'un stage
+1dcc3736046b2b15666580733bd23872c6a531f7 f1fd07bd885a8e427df186a097ec0d367f821cae oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610731015 +0100	commit: Modification affichage stage
+f1fd07bd885a8e427df186a097ec0d367f821cae 6c6134d29a8b78bbd7f197c6ce7f0005a91e4f50 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1610746779 +0100	commit: Affichage de la page filtre
+6c6134d29a8b78bbd7f197c6ce7f0005a91e4f50 3f1292a4f0f52a83ac0df053ad7e71257a8d82e2 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1611840854 +0100	commit: ecriture du code du controlleur pour recuperer les stages en bd
+3f1292a4f0f52a83ac0df053ad7e71257a8d82e2 e64339454570761c263388e4bbee293454132596 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1611844511 +0100	commit: adaptation du code de la vue index.html.twig pour afficher les stages envoyées par le controleur
+e64339454570761c263388e4bbee293454132596 dad7e93edd28f2a5ae31f70954fc6189a0b46dce oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1612007948 +0100	commit: Modification non terminé du fichier Appfixture.php
+dad7e93edd28f2a5ae31f70954fc6189a0b46dce b35810579d317e78cab1e0ab52899fe3f1f3640c oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1612128647 +0100	commit: Modification terminé du fichier AppFixtures.php
+b35810579d317e78cab1e0ab52899fe3f1f3640c 009f3cba7d31f52dce1cfc67048282800658c2f5 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1613906225 +0100	commit: premieères mises en place de liens etre les pages
+009f3cba7d31f52dce1cfc67048282800658c2f5 f2a03c6ea36e1adc6ce8890dee12e9b9c8d8b244 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1614099677 +0100	commit: Mise en place de différent lien et d'une nouvelle route : filtre/formations
+f2a03c6ea36e1adc6ce8890dee12e9b9c8d8b244 ca69cdf10d928032be540aeb729a4409f31712c2 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1614114020 +0100	commit: mise en place des liens pour les bouttons
+ca69cdf10d928032be540aeb729a4409f31712c2 c931ab098736ce735b94b08e134adc0f19d24d38 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1614239862 +0100	commit: affichage des données recupérés en bd -erreur
+c931ab098736ce735b94b08e134adc0f19d24d38 f1596b86017570d7fdcd27b998df0de5df13e1cf oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1614268167 +0100	commit: Mise en place des liens etre chaque page + récuperations de données
+f1596b86017570d7fdcd27b998df0de5df13e1cf b13fb5d360933931d51ccce6dbe45b79b1d8ce58 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1614289514 +0100	commit: Mise en place de tous les liens entre les pages
+b13fb5d360933931d51ccce6dbe45b79b1d8ce58 f0b1f009513c918920bc525317a6a9a61ba67609 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1614289763 +0100	commit: Modification de commentaires de codes
+f0b1f009513c918920bc525317a6a9a61ba67609 1dcb82a40b727322e3c0e5fcbb2094f620772004 oihan Maraud <omaraud@iutbayonne.univ-pau.fr> 1614290644 +0100	commit: injection de dépendances

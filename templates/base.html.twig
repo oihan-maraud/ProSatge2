@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- BLOC DE FEUILLES DE STYLES -->
+        {% block stylesheets %}
+        <link href="{{asset('/css/bootstrap.min.css')}}" rel="stylesheet">
+          <link href="{{asset('/css/fontello.css')}}" rel="stylesheet">
+          <link href="css/bootstrap.min.css" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+
+        {% block body %}
+
+        {% endblock %}
+        <!-- BLOC JAVASCRIPTS -->
+
+          <script src="{{asset('/js/bootstrap.bundle.min.js')}}"</script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+          integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+          crossorigin="anonymous"></script>
+          <script src="{{asset('/js/bootstrap.min.js')}}"></script>
+          {% block javascripts %}{% endblock %}
+    </body>
+</html>
