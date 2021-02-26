@@ -29,6 +29,13 @@ class ProjetStageController extends AbstractController
      */
     public function ajouterEntreprise(): Response
     {
+      //Création d'une entreprise vierge qui sera remplie par le formulaire
+      $entreprise = new Entreprise();
+
+      //Création du formulaire permettant de saisir une entreprises
+      $formulaireEntreprise = $this->createFormBuilder($entreprise)
+      ->add("")
+      ;
       //afficher la page présentant le formulaire d'ajout d'une entreprise
       return  $this -> render('projet_stage/ajoutEntreprise.html.twig');
     }
