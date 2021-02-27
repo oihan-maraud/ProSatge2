@@ -4,7 +4,21 @@
 
     <h1><center>Ajout d'une entreprise<center></h1>
 
-      Saisissez les caractéristiques de votre entreprise.
-      
-      {{form(vueFormulaire)}}
+      <p style="margin : 10px">Saisissez les caractéristiques de votre entreprise.</p>
+      <div style="margin : 20px">
+        {{form_start(vueFormulaire)}}
+
+        {{form_row(vueFormulaire.nom)}}
+
+        {{form_row(vueFormulaire.adresse)}}
+
+        {{form_row(vueFormulaire.domaineActivite)}}
+
+        {{form_row(vueFormulaire.numTel)}}
+
+        {{form_row(vueFormulaire.siteWeb)}}
+
+        {{form_end(vueFormulaire)}}
+      </div>
+
 {% endblock %}
