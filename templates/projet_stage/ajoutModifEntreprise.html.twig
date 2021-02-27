@@ -1,8 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
-    <h1><center>Ajout d'une entreprise<center></h1>
+    {% if action == "ajouter"%}
+      <h1><center>Ajouter votre entreprise</center></h1>
+    {% else %}
+      <h1><center>Modifier votre entreprise</center></h1>
+    {% endif %}
 
       <p style="margin : 10px">Saisissez les caractéristiques de votre entreprise.</p>
       <div style="margin : 20px">
@@ -18,7 +21,7 @@
 
         {{form_row(vueFormulaire.siteWeb, {'attr' : {'placeholder':"www.siteDeVotreEntreprise.fr"}})}}
         <br>
-        <button type="submit" class="btn btn-dark" name="button">Enregistrer</button>
+        <center><button type="submit" class="btn btn-dark" name="button">Enregistrer</button></center>
 
         {{form_end(vueFormulaire)}}
       </div>

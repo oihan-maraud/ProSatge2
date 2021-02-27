@@ -64,10 +64,46 @@ class ProjetStageController extends AbstractController
       }
 
       //afficher la page présentant le formulaire d'ajout d'une entreprise
-      return  $this -> render('projet_stage/ajoutEntreprise.html.twig',
-      ['vueFormulaire'=>$formulaireEntreprise->createView()]);
+      return  $this -> render('projet_stage/ajoutModifEntreprise.html.twig',
+      ['vueFormulaire'=>$formulaireEntreprise->createView(), 'action' => "ajouter"]);
     }
 
+    /**
+     * @Route("/entreprise/modifier/{id}", name="projet_stage_modifierEntreprise")
+     */
+    public function modifierEntreprise(Request $request, EntityManagerInterface $manager, Entreprise $entreprise): Response
+    {
+      //Création du formulaire permettant de saisir une entreprises
+      $formulaireEntreprise = $this->createFormBuilder($entreprise)
+      ->add('nom')
+      ->add('adresse')
+      ->add('domaineActivite')
+      ->add('numTel', TelType::class)
+      ->add('siteWeb', UrlType::class)
+      ->getForm()
+      ;
+
+      /*On demande au formulaire d'analyser la derniere requête Http.
+      Si le tableau POST contenu dans cette requête contient des variables
+      nom, adresse, etc, alors la méthode handleRequest() récupère les valeurs
+      et les affecte à l'objet $entreprise */
+      $formulaireEntreprise->handleRequest($request);
+
+      if ($formulaireEntreprise->isSubmitted())
+      {
+        //Enregistrer l'entreprise en base de donnéelse
+        $manager->persist($entreprise);
+        $manager->flush();
+
+        //Rediriger l'utilisaateur vers la page d'accueil
+        return $this->redirectToRoute('projet_stage_accueil');
+
+      }
+
+      //afficher la page présentant le formulaire d'ajout d'une entreprise
+      return  $this -> render('projet_stage/ajoutModifEntreprise.html.twig',
+      ['vueFormulaire'=>$formulaireEntreprise->createView(), 'action' => "modifier"]);
+    }
 
     /**
      * @Route("/stages/{id}", name="projet_stage_Stages")

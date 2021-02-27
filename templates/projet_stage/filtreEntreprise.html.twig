@@ -12,13 +12,22 @@
 						<th>
 							Entreprises
 						</th>
+						<th>
+							Adresses
+						</th>
 					</tr>
 				</thead>
 				<tbody>
 					{% for entrepriseCourante in entreprises %}
 					<tr class="table table-dark">
-						<td>
+						<td width=45%>
 							<a href="{{path('projet_stage_enreprise',{nom:entrepriseCourante.nom})}}">{{entrepriseCourante.nom}}</a>
+						</td>
+						<td width=45%>
+							{{entrepriseCourante.adresse}}
+						</td >
+						<td width=10% class="table table-white">
+							<a href="{{path('projet_stage_modifierEntreprise',{id:entrepriseCourante.id})}}">Modifier</a>
 						</td>
 					</tr>
 					{%endfor%}
