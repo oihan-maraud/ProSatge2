@@ -9,6 +9,9 @@ use App\Entity\Stage;
 use App\Entity\Entreprise;
 use App\Entity\Formation;
 use App\Repository\StageRepository;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 
 class ProjetStageController extends AbstractController
 {
@@ -34,11 +37,11 @@ class ProjetStageController extends AbstractController
 
       //Création du formulaire permettant de saisir une entreprises
       $formulaireEntreprise = $this->createFormBuilder($entreprise)
-      ->add('nom')
-      ->add('adresse')
-      ->add('domaineActivite')
-      ->add('numTel')
-      ->add('siteWeb')
+      ->add('nom', TextType::class)
+      ->add('adresse', TextType::class)
+      ->add('domaineActivite', TextType::class)
+      ->add('numTel', TelType::class)
+      ->add('siteWeb', UrlType::class)
       ->getForm()
       ;
 
