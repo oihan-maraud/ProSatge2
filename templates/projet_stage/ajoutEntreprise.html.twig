@@ -8,15 +8,15 @@
       <div style="margin : 20px">
         {{form_start(vueFormulaire)}}
 
-        {{form_row(vueFormulaire.nom)}}
+        {{form_row(vueFormulaire.nom, {'attr' : {'placeholder':"Nom de votre entreprise"}})}}
 
-        {{form_row(vueFormulaire.adresse)}}
+        {{form_row(vueFormulaire.adresse, {'attr' : {'placeholder':"Adresse de votre entreprise"}})}}
 
-        {{form_row(vueFormulaire.domaineActivite)}}
+        {{form_row(vueFormulaire.domaineActivite, {'attr' : {'placeholder':"Domaine d'activité de votre entreprise"}})}}
 
-        {{form_row(vueFormulaire.numTel)}}
+        {{form_row(vueFormulaire.numTel, {'attr' : {'placeholder':"09.XX.XX.XX.XX"}})}}
 
-        {{form_row(vueFormulaire.siteWeb)}}
+        {{form_row(vueFormulaire.siteWeb, {'attr' : {'placeholder':"www.siteDeVotreEntreprise.fr"}})}}
 
         {{form_end(vueFormulaire)}}
       </div>
