@@ -11,6 +11,8 @@ use App\Entity\Formation;
 use App\Repository\StageRepository;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
+use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\EntityManagerInterface;
 
 class ProjetStageController extends AbstractController
 {
@@ -29,7 +31,7 @@ class ProjetStageController extends AbstractController
     /**
      * @Route("/entreprise/ajouter", name="projet_stage_ajoutEntreprise")
      */
-    public function ajouterEntreprise(): Response
+    public function ajouterEntreprise(Request $request, EntityManagerInterface $manager): Response
     {
       //Création d'une entreprise vierge qui sera remplie par le formulaire
       $entreprise = new Entreprise();
@@ -43,6 +45,23 @@ class ProjetStageController extends AbstractController
       ->add('siteWeb', UrlType::class)
       ->getForm()
       ;
+
+      /*On demande au formulaire d'analyser la derniere requête Http.
+      Si le tableau POST contenu dans cette requête contient des variables
+      nom, adresse, etc, alors la méthode handleRequest() récupère les valeurs
+      et les affecte à l'objet $entreprise */
+      $formulaireEntreprise->handleRequest($request);
+
+      if ($formulaireEntreprise->isSubmitted())
+      {
+        //Enregistrer l'entreprise en base de donnéelse
+        $manager->persist($entreprise);
+        $manager->flush();
+
+        //Rediriger l'utilisaateur vers la page d'accueil
+        return $this->redirectToRoute('projet_stage_accueil');
+
+      }
 
       //afficher la page présentant le formulaire d'ajout d'une entreprise
       return  $this -> render('projet_stage/ajoutEntreprise.html.twig',
