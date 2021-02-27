@@ -25,7 +25,7 @@ class ProjetStageController extends AbstractController
     }
 
     /**
-     * @Route("/ajouterEntreprise", name="projet_stage_ajoutEntreprise")
+     * @Route("/entreprise/ajouter", name="projet_stage_ajoutEntreprise")
      */
     public function ajouterEntreprise(): Response
     {
@@ -34,10 +34,17 @@ class ProjetStageController extends AbstractController
 
       //Création du formulaire permettant de saisir une entreprises
       $formulaireEntreprise = $this->createFormBuilder($entreprise)
-      ->add("")
+      ->add('nom')
+      ->add('adresse')
+      ->add('domaineActivite')
+      ->add('numTel')
+      ->add('siteWeb')
+      ->getForm()
       ;
+
       //afficher la page présentant le formulaire d'ajout d'une entreprise
-      return  $this -> render('projet_stage/ajoutEntreprise.html.twig');
+      return  $this -> render('projet_stage/ajoutEntreprise.html.twig',
+      ['vueFormulaire'=>$formulaireEntreprise->createView()]);
     }
 
 
