@@ -52,7 +52,7 @@ class ProjetStageController extends AbstractController
       et les affecte à l'objet $entreprise */
       $formulaireEntreprise->handleRequest($request);
 
-      if ($formulaireEntreprise->isSubmitted())
+      if ($formulaireEntreprise->isSubmitted() && $formulaireEntreprise->isValid())
       {
         //Enregistrer l'entreprise en base de donnéelse
         $manager->persist($entreprise);
@@ -122,10 +122,10 @@ class ProjetStageController extends AbstractController
       //récupérer le repository de l'entité Stage
       $repositoryStage = $this->getDoctrine()->getRepository(Stage::class);
 
-      $stage = $repositoryStage->findByNomEntreprise($nom);
+      $stages = $repositoryStage->findByNomEntreprise($nom);
 
       return  $this ->render('projet_stage/entreprise.html.twig',
-      ['stage'=> $stage]);
+      ['stages'=> $stages,'entreprise'=> $nom]);
     }
 
     /**
@@ -137,10 +137,10 @@ class ProjetStageController extends AbstractController
       $repositoryStage = $this->getDoctrine()->getRepository(Stage::class);
 
       //récupérer les stages de la formation qui a pour id celui passé en paramètre qui est enregistré en BD
-      $stage = $repositoryStage->findByNomFormation($intitule);
+      $stages = $repositoryStage->findByNomFormation($intitule);
 
       return  $this ->render('projet_stage/formation.html.twig',
-      ['stage'=>  $stage]);
+      ['stages'=>  $stages, 'intitule'=> $intitule]);
     }
     /**
      * @Route("/filtreFormation", name="projet_stage_filtre_formation")

@@ -10,12 +10,12 @@
 				<thead>
 					<tr>
 						<th>
-							Formation
+							{{intitule}}
 						</th>
 					</tr>
 				</thead>
 				<tbody>
-					{% for stageCourant in stage %}
+					{% for stageCourant in stages %}
           <tr class="table-dark">
               <td>
                   <a href="{{path('projet_stage_Stages',{id:stageCourant.id})}}">{{stageCourant.intitule}}</a>

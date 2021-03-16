@@ -103,6 +103,7 @@ class Formation
 
         return $this;
     }
+    
 
     public function removeFormation(Stage $formation): self
     {
