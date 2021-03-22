@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Form\EntrepriseType;
 
 class ProjetStageController extends AbstractController
 {
@@ -37,14 +38,7 @@ class ProjetStageController extends AbstractController
       $entreprise = new Entreprise();
 
       //Création du formulaire permettant de saisir une entreprises
-      $formulaireEntreprise = $this->createFormBuilder($entreprise)
-      ->add('nom')
-      ->add('adresse')
-      ->add('domaineActivite')
-      ->add('numTel', TelType::class)
-      ->add('siteWeb', UrlType::class)
-      ->getForm()
-      ;
+      $formulaireEntreprise = $this->createForm(EntrepriseType::class, $entreprise);
 
       /*On demande au formulaire d'analyser la derniere requête Http.
       Si le tableau POST contenu dans cette requête contient des variables
@@ -73,15 +67,8 @@ class ProjetStageController extends AbstractController
      */
     public function modifierEntreprise(Request $request, EntityManagerInterface $manager, Entreprise $entreprise): Response
     {
-      //Création du formulaire permettant de saisir une entreprises
-      $formulaireEntreprise = $this->createFormBuilder($entreprise)
-      ->add('nom')
-      ->add('adresse')
-      ->add('domaineActivite')
-      ->add('numTel', TelType::class)
-      ->add('siteWeb', UrlType::class)
-      ->getForm()
-      ;
+      //Création du formulaire permettant de modifier une entreprise
+      $formulaireEntreprise = $this->createForm(EntrepriseType::class, $entreprise);
 
       /*On demande au formulaire d'analyser la derniere requête Http.
       Si le tableau POST contenu dans cette requête contient des variables

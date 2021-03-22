@@ -35,7 +35,7 @@ class Entreprise
      * @ORM\Column(type="string", length=150, nullable=true)
      * @Assert\NotBlank
      * @Assert\Regex(
-     *    pattern = "#[0-9]{2,3} #",
+     *    pattern = "#[0-9]{2,4} #",
      *    message="Le numéro de rue semble incorrect"
      * )
      * @Assert\Regex(
