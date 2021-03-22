@@ -89,7 +89,7 @@ class ProjetStageController extends AbstractController
       et les affecte à l'objet $entreprise */
       $formulaireEntreprise->handleRequest($request);
 
-      if ($formulaireEntreprise->isSubmitted())
+      if ($formulaireEntreprise->isSubmitted() && $formulaireEntreprise->isValid())
       {
         //Enregistrer l'entreprise en base de donnéelse
         $manager->persist($entreprise);
