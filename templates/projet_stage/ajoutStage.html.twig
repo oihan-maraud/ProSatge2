@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+      <h1><center>Ajouter un stage</center></h1>
+
+      <p style="margin : 10px">Ajouter un stage</p>
+      <div style="margin : 20px">
+        {{form_start(vueFormulaireStage)}}
+
+        {{form_row(vueFormulaireStage.intitule, {'attr' : {'placeholder':"Titre du stage"}})}}
+
+        {{form_row(vueFormulaireStage.dateDebut, {'attr' : {'placeholder':"Domaine du stage"}})}}
+
+        {{form_row(vueFormulaireStage.description, {'attr' : {'placeholder':"Description du stage"}})}}
+
+        {{form_row(vueFormulaireStage.email, {'attr' : {'placeholder':"email@email.com"}})}}
+
+
+        <br>
+        <center><button type="submit" class="btn btn-dark" name="button">Enregistrer</button></center>
+
+        {{form_end(vueFormulaireStage)}}
+      </div>
+
+{% endblock %}

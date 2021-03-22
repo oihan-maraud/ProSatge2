@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Form\EntrepriseType;
+use App\Form\StageType;
 
 class ProjetStageController extends AbstractController
 {
@@ -60,6 +61,39 @@ class ProjetStageController extends AbstractController
       //afficher la page présentant le formulaire d'ajout d'une entreprise
       return  $this -> render('projet_stage/ajoutModifEntreprise.html.twig',
       ['vueFormulaire'=>$formulaireEntreprise->createView(), 'action' => "ajouter"]);
+    }
+
+    /**
+     * @Route("/stage/ajouter/ajoutStage", name="projet_stage_ajoutStage")
+     */
+    public function ajouterStage(Request $request, EntityManagerInterface $manager): Response
+    {
+      //Création d'un stage vierge qui sera remplie par le formulaire
+      $stage = new Stage();
+
+      //Création du formulaire permettant de saisir une entreprises
+      $formulaireStage = $this->createForm(StageType::class, $stage);
+
+      /*On demande au formulaire d'analyser la derniere requête Http.
+      Si le tableau POST contenu dans cette requête contient des variables
+      nom, adresse, etc, alors la méthode handleRequest() récupère les valeurs
+      et les affecte à l'objet $entreprise */
+      $formulaireStage->handleRequest($request);
+
+      if ($formulaireStage->isSubmitted() && $formulaireStage->isValid())
+      {
+        //Enregistrer l'entreprise en base de donnéelse
+        $manager->persist($stage);
+        $manager->flush();
+
+        //Rediriger l'utilisaateur vers la page d'accueil
+        return $this->redirectToRoute('projet_stage_accueil');
+
+      }
+
+      //afficher la page présentant le formulaire d'ajout d'une entreprise
+      return  $this -> render('projet_stage/ajoutStage.html.twig',
+      ['vueFormulaireStage'=>$formulaireStage->createView()]);
     }
 
     /**

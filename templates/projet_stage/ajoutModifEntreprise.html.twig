@@ -9,21 +9,21 @@
 
       <p style="margin : 10px">Saisissez les caractéristiques de votre entreprise.</p>
       <div style="margin : 20px">
-        {{form_start(vueFormulaire)}}
+        {{form_start(vueFormulaireStage)}}
 
-        {{form_row(vueFormulaire.nom, {'attr' : {'placeholder':"Nom de votre entreprise"}})}}
+        {{form_row(vueFormulaireStage.nom, {'attr' : {'placeholder':"Nom de votre entreprise"}})}}
 
-        {{form_row(vueFormulaire.adresse, {'attr' : {'placeholder':"Adresse de votre entreprise"}})}}
+        {{form_row(vueFormulaireStage.adresse, {'attr' : {'placeholder':"Adresse de votre entreprise"}})}}
 
-        {{form_row(vueFormulaire.domaineActivite, {'attr' : {'placeholder':"Domaine d'activité de votre entreprise"}})}}
+        {{form_row(vueFormulaireStage.domaineActivite, {'attr' : {'placeholder':"Domaine d'activité de votre entreprise"}})}}
 
-        {{form_row(vueFormulaire.numTel, {'attr' : {'placeholder':"09 XX XX XX XX"}})}}
+        {{form_row(vueFormulaireStage.numTel, {'attr' : {'placeholder':"09 XX XX XX XX"}})}}
 
-        {{form_row(vueFormulaire.siteWeb, {'attr' : {'placeholder':"www.siteDeVotreEntreprise.fr"}})}}
+        {{form_row(vueFormulaireStage.siteWeb, {'attr' : {'placeholder':"www.siteDeVotreEntreprise.fr"}})}}
         <br>
         <center><button type="submit" class="btn btn-dark" name="button">Enregistrer</button></center>
 
-        {{form_end(vueFormulaire)}}
+        {{form_end(vueFormulaireStage)}}
       </div>
 
 {% endblock %}
