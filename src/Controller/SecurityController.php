@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\User;
 use App\Form\UserType;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class SecurityController extends AbstractController
 {
@@ -41,7 +42,7 @@ class SecurityController extends AbstractController
     /**
     * @Route("/inscription", name="app_inscription")
     */
-   public function inscription(Request $request, EntityManagerInterface $manager)
+   public function inscription(Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder)
    {
      //Creation d'un utilisateur vierge sui sera remplie par le formulaire
      $utilisateur = new User();
@@ -58,6 +59,7 @@ class SecurityController extends AbstractController
           {
              // Enregistrer l'utilisateur en base de données
              $utilisateur->setRoles(['ROLE_USER']);
+
              //Encoder le mot de passe de l'utilisateur
              $encodagePassword = $encoder->encodePassword($utilisateur, $utilisateur->getPassword());
              $utilisateur->setPassword($encodagePassword);
@@ -65,7 +67,7 @@ class SecurityController extends AbstractController
              $manager->persist($utilisateur);
              $manager->flush();
 
-             // Rediriger l'utilisateur vers la page d'accueil
+             // Rediriger l'utilisateur vers la page de login
              return $this->redirectToRoute('app_login');
           }
 
