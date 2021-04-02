@@ -19,6 +19,8 @@ security:
             guard:
                 authenticators:
                     - App\Security\FormulaireLoginAuthenticator
+            logout:
+                path: app_logout
             # https://symfony.com/doc/current/security.html#firewalls-authentication
 
             # https://symfony.com/doc/current/security/impersonating_user.html

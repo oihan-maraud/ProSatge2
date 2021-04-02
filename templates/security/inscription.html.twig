@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+<div style="margin : 20px">
+  {{form_start(vueFormulaire)}}
+
+  {{form_row(vueFormulaire.prenom, {'attr' : {'placeholder':"Votre prénom"}})}}
+
+  {{form_row(vueFormulaire.nom, {'attr' : {'placeholder':"Votre nom"}})}}
+
+  {{form_row(vueFormulaire.email, {'attr' : {'placeholder':"votre email"}})}}
+
+  {{form_row(vueFormulaire.password, {'attr' : {'placeholder':"Votre mot de passe"}})}}
+
+
+  <br>
+  <center><button type="submit" class="btn btn-dark" name="button">S'inscrire</button></center>
+
+  {{form_end(vueFormulaire)}}
+</div>
+{% endblock %}

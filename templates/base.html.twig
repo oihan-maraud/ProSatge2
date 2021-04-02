@@ -19,9 +19,20 @@
       <a style="float : right; margin : 10px" href="{{path('projet_stage_ajoutStage')}}">
         Ajouter un stage
       </a>
-      <a style="float : right; margin : 10px" href="{{path('formation_index')}}">
-        Gérer les formations
+      {%if is_granted ('ROLE_USER')%}
+      <a style="float : right; margin : 10px" href="{{path('app_logout')}}">
+          {{app.user.prenom}}
+          Déconnexion
       </a>
+      {% else %}
+      <a style="float : right; margin : 10px" href="{{path('app_login')}}">
+          Connexion
+      </a>
+      <a style="float : right; margin : 10px" href="{{path('app_inscription')}}">
+        Inscription
+      </a>
+      {% endif %}
+
         {% block body %}
         {% endblock %}
         <!-- BLOC JAVASCRIPTS -->
