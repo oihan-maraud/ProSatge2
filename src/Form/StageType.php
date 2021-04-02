@@ -6,6 +6,8 @@ use App\Entity\Stage;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use App\Entity\Formation;
 
 class StageType extends AbstractType
 {
@@ -14,12 +16,14 @@ class StageType extends AbstractType
         $builder
             ->add('intitule')
             ->add('description')
-            ->add('dateDebut')
-            ->add('duree')
-            ->add('competencesRequises')
-            ->add('experiencesRequises')
             ->add('email')
-            
+            ->add('formation', EntityType::class, array(
+              'class'=> Formation::class,
+              'choice_label' => 'intitule',
+              'multiple'=>true,
+              'expanded'=>true,
+            ))
+
         ;
     }
 
