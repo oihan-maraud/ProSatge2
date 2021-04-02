@@ -15,7 +15,10 @@ security:
 
 
             # activate different ways to authenticate
-            http_basic: true
+            #http_basic: true
+            guard:
+                authenticators:
+                    - App\Security\FormulaireLoginAuthenticator
             # https://symfony.com/doc/current/security.html#firewalls-authentication
 
             # https://symfony.com/doc/current/security/impersonating_user.html
